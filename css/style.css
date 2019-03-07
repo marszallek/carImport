@@ -44,8 +44,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-content: space-around;
+  flex-wrap: nowrap;
   background-color: rgb(180, 50, 50);
   padding: 1vw;
 }
@@ -89,9 +88,9 @@ body {
 }
 
 .menu {
-  width: 14vw;
-  min-width: 120px;
-  max-width: 200px;;
+  width: 16vw;
+  min-width: 110px;
+  max-width: 300px;;
   border-bottom: 1px solid white;
   border-radius: 0.5vw;
   letter-spacing: 4px;
