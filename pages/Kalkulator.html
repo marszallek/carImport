@@ -44,10 +44,10 @@
     </div>
     <!--Navigation-->
     <div id="kalkulator">
-      <div class="dolar"><input id="rate" type="number">Kurs Dolara</div>
-      <div class="dolar"><input id="auction" type="number" abbr title="Cena za którą został wylicytowany samochód">
+      <div class="dolar"><input id="rate" type="number" value="3" min="2" max="7">Kurs Dolara</div>
+      <div class="dolar"><input id="auction" type="number" value="1000" min="500" abbr title="Cena za którą został wylicytowany samochód" >
         Cena Licytacji $</div>
-      <div class="dolar"><input id="score" type="number" abbr title="Kwota tutaj podana to wartosc rynkowa samochody np. z Otomoto.
+      <div class="dolar"><input id="score" type="number" value="10000" min="10000" abbr title="Kwota tutaj podana to wartosc rynkowa samochody np. z Otomoto.
               Pomniejszona o max. 60% przez rzeczoznawce. Ta kwota jest niezbędna do obliczenia akcyzy.
               Szczególnie przy samochodach o silnikach powyżej 2.0 ccm3">Wartość
         Rynkowa w PLN</div>
@@ -56,7 +56,7 @@
           <td>Stan Licytacji</td>
           <td>
             <select id="stan" onchange="newyork()" required>
-              <option value="800">AL - Alabama</option>
+              <option value="800" >AL - Alabama</option>
               <option value="NOT" selected>AK - Alaska</option>
               <option value="1200">AZ - Arizona</option>
               <option value="900">AR - Arkansas</option>

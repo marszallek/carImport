@@ -90,10 +90,10 @@ body {
 .menu {
   width: 16vw;
   min-width: 110px;
-  max-width: 300px;;
+  max-width: 230px;;
   border-bottom: 1px solid white;
   border-radius: 0.5vw;
-  letter-spacing: 4px;
+  letter-spacing: 0.7vw;
   text-align: center;
   line-height: 25px;
   box-shadow: 0px 0px 13px 2px white
@@ -188,6 +188,10 @@ th {
   margin: 10px 5px 10px 5px;
   font-size: 14px;
   letter-spacing: 1px;
+}
+
+.dolar:hover {
+  transform: scale(1.05)
 }
 
 .mark {
