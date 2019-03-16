@@ -13,12 +13,11 @@ body {
   margin-right: auto;
 }
 
+h1{
+  font-size: 3vw;
+}
+
 #container {
-  width: 100%;
-  min-width: 300px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
   background-image: url("../img/stars.jpg");
 }
 
@@ -47,6 +46,7 @@ body {
   flex-wrap: nowrap;
   background-color: rgb(180, 50, 50);
   padding: 1vw;
+  border-radius: 0px 0px 20px 20px;
 }
 
 #content {
@@ -85,6 +85,10 @@ body {
   text-align: center;
   font-size: 24px;
   color: blue;
+}
+
+#close:hover{
+  cursor: pointer;
 }
 
 .menu {
@@ -129,91 +133,4 @@ a:visited {
 
 a:hover {
   color: lightsteelblue;
-}
-
-/*Stylowanie kalkulatora*/
-#normal {
-  text-align: center;
-}
-
-#table {
-  background-color: #9389e89e;
-  color: black;
-}
-
-#cenafinalna {
-  background-color: #9389e89e;
-  color: black;
-  border: 2px solid red;
-}
-
-td,
-th {
-  border: 1px solid white;
-  border-radius: 7px;
-}
-
-#york,
-#suma,
-#sumb {
-  width: 145px;
-}
-
-#instrukcja {
-  color: rgb(117, 2, 2);
-  letter-spacing: 2px;
-}
-
-#instruction {
-  display: none;
-  width: 300px;
-  height: 300px;
-  border: 1px solid red;
-  background-color: black;
-  color: white;
-  border-radius: 30px;
-  margin-top: 0px;
-  font-weight: 200;
-}
-
-.dolar {
-  justify-content: center;
-  display: inline-flex;
-  border: 1px solid cadetblue;
-  background-color: lightsteelblue;
-  box-shadow: 1px 45px 60px black;
-  border-radius: 30px;
-  padding: 5px;
-  width: 300px;
-  margin: 10px 5px 10px 5px;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.dolar:hover {
-  transform: scale(1.05)
-}
-
-.mark {
-  background-color: blue;
-}
-
-button {
-  border-radius: 12px;
-}
-
-button:hover {
-  background-color: rgb(202, 202, 218);
-}
-
-#instrukcja:hover {
-  cursor: pointer;
-}
-
-input,
-select {
-  width: 100px;
-  margin-right: 10px;
-  border-radius: 5px;
-  text-align: center;
 }

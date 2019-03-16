@@ -40,10 +40,4 @@ function calculate() {
 	var sumb = (+clon * 10 + +vatn + +tax - 100) * rate + 2500 + 1200;
 	document.getElementById("suma").textContent = Math.round(suma);
 	document.getElementById("sumb").textContent = Math.round(sumb);
-}
-
-$(document).ready(() => {
-	$('#instrukcja').on('click', () => {
-		$('#instruction').fadeToggle(1000);
-	})
-});
+};
