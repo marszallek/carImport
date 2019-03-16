@@ -20,14 +20,13 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container p-0">
     <div class=" row, header">
       <div class="col, text-white text-right">
-        <h1>Import samochodu z USA</h1>
-        <a href="../index.html">
-          <div class="col, home">Strona Główna
-          </div>
-        </a>
+        <h2>Import samochodu z USA</h1>
+      </div>
+      <div class="col text-white text-center my-5">
+        <a class="home" href="../index.html">Strona Główna</a>
       </div>
       <!--Logo-->
     </div>
@@ -36,7 +35,7 @@
       <div class="col navbuttons"><a href="Projekty.html">
           Projekty</a>
       </div>
-      <div class="col navbuttons"><a href="Kalkulator.html">
+      <div class="col active"><a href="Kalkulator.html">
           Kalkulator</a>
       </div>
       <div class="col navbuttons"><a href="Tracking.html">
@@ -47,194 +46,197 @@
       </div>
     </div>
   </div>
-  <!--Navigation-->
-
-  <div class="row">
-    <div class="col">
-      <div class="row w-75 mx-auto border border-primary rounded-pill my-3 py-1 justify-content-center">
-        <input id="rate" type="number" value="3" min="2" max="7">Kurs Dolara
-      </div>
-      <div class="row w-75 mx-auto border border-primary rounded-pill my-3 py-1 justify-content-center">
-        <input id="auction" type="number" value="1000" min="500" abbr title="Cena za którą został wylicytowany samochód">Cena
-        Licytacji $
-      </div>
-      <div class="row w-75 mx-auto border border-primary rounded-pill my-3 py-1 justify-content-center">
-        <input id="score" type="number" value="10000" min="10000" abbr title="Kwota tutaj podana to wartosc rynkowa samochody np. z Otomoto.
+  </div>
+  <!-- End Of Navigation-->
+  <div class="container rounded mt-2 mx-auto">
+    <div class="row ">
+      <div class="col">
+        <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
+          <input id="rate" type="number" value="3" min="2" max="7">Kurs Dolara
+        </div>
+        <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
+          <input id="auction" type="number" value="1000" min="500" abbr title="Cena za którą został wylicytowany samochód">Cena
+          Licytacji $
+        </div>
+        <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
+          <input id="score" type="number" value="10000" min="10000" abbr title="Kwota tutaj podana to wartosc rynkowa samochody np. z Otomoto.
               Pomniejszona o max. 60% przez rzeczoznawce. Ta kwota jest niezbędna do obliczenia akcyzy.
-              Szczególnie przy samochodach o silnikach powyżej 2.0 ccm3">Wartość
-        Rynkowa w PLN
+              Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">Wartość
+          Rynkowa w PLN
+        </div>
+      </div>
+      <!--column with three rows-->
+    </div>
+
+    <!--row for two column-->
+    <div class="row text-center">
+      <!--First column-->
+      <div class="col">
+        <table class="dolar2 p-0 mx-auto my-3">
+          <tr>
+            <td class="border-0" rowspan="1">Wybierz Stan Licytacji</td>
+            <td class="border-0" rowspan="1">
+              <select class="custom-select-sm border-0" id="stan" onchange="newyork()" required>
+                <option value="800">AL - Alabama</option>
+                <option value="NOT" selected>AK - Alaska</option>
+                <option value="1200">AZ - Arizona</option>
+                <option value="900">AR - Arkansas</option>
+                <option value="1200">CA - Caifornia</option>
+                <option value="1000">CO - Colorado</option>
+                <option value="800">CT - Connecticut</option>
+                <option value="600">DE - Delaware</option>
+                <option value="800">FL - Florida</option>
+                <option value="800">GA - Georgia</option>
+                <option value="NO">HI - Hawaii</option>
+                <option value="1500">ID - Idaho</option>
+                <option value="800">IL - Illinois</option>
+                <option value="800">IN - Indiana</option>
+                <option value="900">IA - Iowa</option>
+                <option value="900">KS - Kansas</option>
+                <option value="800">KY - Kentucky</option>
+                <option value="900">LA - Louisiana</option>
+                <option value="800">ME - Maine</option>
+                <option value="600">MD - Meryland</option>
+                <option value="800">MA - Massachusetts</option>
+                <option value="800">MI - Michigan</option>
+                <option value="1000">MN - Minesota</option>
+                <option value="800">MS - Mississippi</option>
+                <option value="900">MO - Missouri</option>
+                <option value="1500">MT - Montana</option>
+                <option value="1000">NE - Nebraska</option>
+                <option value="1200">NV - Nevada</option>
+                <option value="800">NH - New Hampshire</option>
+                <option value="600">NJ - New Jersey</option>
+                <option value="1000">NM - New Mexico</option>
+                <option value="600">NY - New York</option>
+                <option value="600">NC - North Carolina</option>
+                <option value="1000">ND - North Dakota</option>
+                <option value="600">OH - Ohio</option>
+                <option value="900">OK - Oklahoma</option>
+                <option value="1500">OR - Oregon</option>
+                <option value="600">PA - Pennsylvania</option>
+                <option value="800">RI - Rhode Island</option>
+                <option value="600">SC - South California</option>
+                <option value="1000">SD - South Dakota</option>
+                <option value="800">TN - Tennessee</option>
+                <option value="900">TX - Texas</option>
+                <option value="1200">UT - Utah</option>
+                <option value="800">VT - Vermont</option>
+                <option value="600">VA - Virginia</option>
+                <option value="1500">WA - Washington</option>
+                <option value="600">WV - West Virginia</option>
+                <option value="900">WI - Wisconsin</option>
+                <option value="1000">WY - Wyoming</option>
+              </select>
+            </td>
+            <td class="border-0" style="width:100px; height: 60px;" rowspan="1" id="york">Transport do NY USD</td>
+          </tr>
+          <tr>
+            <td>Akcyza 3.1% USD</td>
+            <td> <button class="btn btn-success btn-sm border-0" onclick="payLowTax()">Silnik < 2.0 L</button> </td>
+                  <td rowspan="2" id="tax">
+            </td>
+          </tr>
+          <tr>
+            <td>Akcyza 18.6% USD</td>
+            <td><button class="btn btn-success btn-sm border-0" id="v8" onclick="payHighTax()">Silnik > 2.0 L</button></td>
+          </tr>
+          <tr>
+            <th class="text-danger" colspan="3">Cena Samochodu Po Opłatach <br /> w Polsce</th>
+          </tr>
+          <tr>
+            <td colspan="2">Przez Gdynie <br /> PLN</td>
+            <td id="suma"></td>
+          </tr>
+          <tr>
+            <td colspan="2">Przez Bremerhaven <br /> PLN</td>
+            <td id="sumb"></td>
+          </tr>
+          <tr>
+            <th colspan="3" class="border-0"><button class="btn btn-outline-danger btn-lg border-0" onclick="calculate()">OBLICZ</button></th>
+          </tr>
+        </table>
+      </div>
+
+      <!--Second column-->
+      <div class="col">
+        <table class="dolar2 p-0 mx-auto my-3">
+          <tr>
+            <th colspan="2" style="border: 0px;">Koszty <br /> Szczegółowe</th>
+          </tr>
+          <tr>
+            <td>Prowizja Copart/Iaai <br />USD</td>
+            <td id="profit"></td>
+          </tr>
+          <tr>
+            <td>Gdynia <br /> 800 USD</td>
+            <td>Bremerhaven <br /> 700 USD</td>
+          </tr>
+          <tr>
+            <td>Transport z Bremerhaven do Polski</td>
+            <td>350 USD</td>
+          </tr>
+          <tr>
+            <td>Cło 10% <br /> Polska USD</td>
+            <td id="clop">Obliczone cło</td>
+          </tr>
+          <tr>
+            <td>Cło 10% <br /> Niemcy USD</td>
+            <td id="clon">Obliczone cło</td>
+          </tr>
+          <tr>
+            <td>Vat Polska <br /> 23% USD</td>
+            <td id="vatpolska">Obliczony vat</td>
+          </tr>
+          <tr>
+            <td>Vat Niemcy <br /> 19% USD</td>
+            <td id="vatniemcy">Obliczony vat</td>
+          </tr>
+          <tr>
+            <td>Agencja Celna <br /> PL</td>
+            <td>1500 PLN</td>
+          </tr>
+          <tr>
+            <td class="border-0">Agencja Celna <br /> DE</td>
+            <td class="border-0">2500 PLN</td>
+          </tr>
+        </table>
+      </div>
+
+      <!--Third Column-->
+      <div class="col">
+        <div class="mx-auto my-3 px-2 " id="instruction">
+          <span class="text-danger font-weight-bold">Instrukcja Kalkulatora</span>
+          <br />
+          <br />
+          1. Wprowadź aktualny kurs dolara.
+          <br /><br />
+          2. Wprowadź cenę za którą chcesz wylicytować samochód.
+          <br /><br />
+          3. Wartość rynkowa jest potrzebna do obliczenia akcyzy. Jest to średnia cena np. z OTOMOTO.
+          Może też być pomniejszona do 60% w zależności od uszkodzenia.
+          <br /><br />
+          4. Wybierz stan w którym odbyła się licytacja.
+          <br /><br />
+          5. Wybierz pojemność silnika. Ma to wpływ na wysokość akzycy.
+          <br /><br />
+          6. Kliknij Oblicz :)
+          <br /><br />
+          <h6 id="close">Zamknij</h6>
+        </div>
       </div>
     </div>
-    <!--column with three rows-->
-  </div>
-
-  <!--row for two column-->
-  <div class="row text-center">
-    <!--Two tables for calculation-->
-    <div class="col my-3 p-0">
-      <table class="dolar2 mx-auto">
-        <tr>
-          <td>Stan Licytacji</td>
-          <td>
-            <select id="stan" onchange="newyork()" required>
-              <option value="800">AL - Alabama</option>
-              <option value="NOT" selected>AK - Alaska</option>
-              <option value="1200">AZ - Arizona</option>
-              <option value="900">AR - Arkansas</option>
-              <option value="1200">CA - Caifornia</option>
-              <option value="1000">CO - Colorado</option>
-              <option value="800">CT - Connecticut</option>
-              <option value="600">DE - Delaware</option>
-              <option value="800">FL - Florida</option>
-              <option value="800">GA - Georgia</option>
-              <option value="NO">HI - Hawaii</option>
-              <option value="1500">ID - Idaho</option>
-              <option value="800">IL - Illinois</option>
-              <option value="800">IN - Indiana</option>
-              <option value="900">IA - Iowa</option>
-              <option value="900">KS - Kansas</option>
-              <option value="800">KY - Kentucky</option>
-              <option value="900">LA - Louisiana</option>
-              <option value="800">ME - Maine</option>
-              <option value="600">MD - Meryland</option>
-              <option value="800">MA - Massachusetts</option>
-              <option value="800">MI - Michigan</option>
-              <option value="1000">MN - Minesota</option>
-              <option value="800">MS - Mississippi</option>
-              <option value="900">MO - Missouri</option>
-              <option value="1500">MT - Montana</option>
-              <option value="1000">NE - Nebraska</option>
-              <option value="1200">NV - Nevada</option>
-              <option value="800">NH - New Hampshire</option>
-              <option value="600">NJ - New Jersey</option>
-              <option value="1000">NM - New Mexico</option>
-              <option value="600">NY - New York</option>
-              <option value="600">NC - North Carolina</option>
-              <option value="1000">ND - North Dakota</option>
-              <option value="600">OH - Ohio</option>
-              <option value="900">OK - Oklahoma</option>
-              <option value="1500">OR - Oregon</option>
-              <option value="600">PA - Pennsylvania</option>
-              <option value="800">RI - Rhode Island</option>
-              <option value="600">SC - South California</option>
-              <option value="1000">SD - South Dakota</option>
-              <option value="800">TN - Tennessee</option>
-              <option value="900">TX - Texas</option>
-              <option value="1200">UT - Utah</option>
-              <option value="800">VT - Vermont</option>
-              <option value="600">VA - Virginia</option>
-              <option value="1500">WA - Washington</option>
-              <option value="600">WV - West Virginia</option>
-              <option value="900">WI - Wisconsin</option>
-              <option value="1000">WY - Wyoming</option>
-            </select>
-          </td>
-          <td id="york">Transport do NY USD</td>
-        <tr>
-          <td>Akcyza 3.1% USD</td>
-          <td> <button onclick="payLowTax()">Silnik < 2.0 L</button> </td> <td rowspan="2" id="tax">
-          </td>
-        </tr>
-        <tr>
-          <td>Akcyza 18.6% USD</td>
-          <td><button id="v8" onclick="payHighTax()">Silnik > 2.0 L</button></td>
-        </tr>
-        <tr>
-          <th colspan="3">Cena Samochodu Po Opłatach <br /> w Polsce</th>
-        </tr>
-        <tr>
-          <td colspan="2">Przez Gdynie <br /> PLN</td>
-          <td id="suma"></td>
-        </tr>
-        <tr>
-          <td colspan="2">Przez Bremerhaven <br /> PLN</td>
-          <td id="sumb"></td>
-        </tr>
-        <tr>
-          <th colspan="2"><button class="btn btn-outline-link btn-sm" onclick="calculate()">OBLICZ</button></th>
-        </tr>
-      </table>
-    </div>
-    <!--First column-->
-    <!--rozwijana-->
-    <div class="col p-0">
-      <table class="dolar2 mx-auto">
-        <tr>
-          <th colspan="2">Koszty <br /> Szczegółowe</th>
-        </tr>
-        <tr>
-          <td>Prowizja Copart/Iaai <br />USD</td>
-          <td id="profit"></td>
-        </tr>
-        <tr>
-          <td>Gdynia <br /> 800 USD</td>
-          <td>Bremerhaven <br /> 700 USD</td>
-        </tr>
-        <tr>
-          <td>Transport z Bremerhaven do Polski</td>
-          <td>350 USD</td>
-        </tr>
-        <tr>
-          <td>Cło 10% <br /> Polska USD</td>
-          <td id="clop">Obliczone cło</td>
-        </tr>
-        <tr>
-          <td>Cło 10% <br /> Niemcy USD</td>
-          <td id="clon">Obliczone cło</td>
-        </tr>
-        <tr>
-          <td>Vat Polska <br /> 23% USD</td>
-          <td id="vatpolska">Obliczony vat</td>
-        </tr>
-        <tr>
-          <td>Vat Niemcy <br /> 19% USD</td>
-          <td id="vatniemcy">Obliczony vat</td>
-        </tr>
-        <tr>
-          <td>Agencja Celna <br /> PL</td>
-          <td>1500 PLN</td>
-        </tr>
-        <tr>
-          <td>Agencja Celna <br /> DE</td>
-          <td>2500 PLN</td>
-        </tr>
-        <tr>
-          <th id="instrukcja" colspan="2">Instrukcja Obsugi Kalkulatora</th>
-        </tr>
-        <tr>
-          <th id="instruction">
-            <br />
-            1. Wprowadź aktualny kurs dolara.<br /><br />
-            2. Wprowadź cenę za którą chcesz wylicytować samochód.<br /><br />
-            3. Wartość rynkowa jest potrzebna do obliczenia akcyzy. Jest to średnia cena np. z OTOMOTO. Może też
-            być
-            pomniejszona do 60%
-            w zależności od uszkodzenia.<br /><br />
-            4. Wybierz stan w którym odbyła się licytacja.<br /><br />
-            5. Wybierz pojemność silnika. Ma to wpływ na wysokość akzycy. <br /><br />
-            6. Kliknij Oblicz :) <br /><br />
-            <h4 id="close">Zamknij</h4><br />
-          </th>
-          <!--instruction-->
-        </tr>
-      </table>
-    </div>
-    <!--Second column-->
-  </div>
-  <!--cenafinalna-->
-  <!--table-->
-  </div>
-  <!--kalkulator-->
-
-  <div id="footer">
+    <!--End Of Row With Three Columns-->
+  
+  
+  <div class="row mx-auto">
     <h5><address> marszallek@vp.pl <br />
         +48 660 771 501 </address>
-      <p style="text-align: right">Daniel Marszałek</p>
+      <p>Daniel Marszałek</p>
     </h5>
   </div>
   <!--end of div Footer-->
-
-  <!--end of div normal-->
+</div><!--End Of The Container-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
