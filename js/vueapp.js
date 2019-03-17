@@ -4,7 +4,7 @@ const app = new Vue({
         currencyRate: 3.5,
         price: 1000,
         marketPrice: 20000,
-        placeOfOrigin: 'Transport do NY',
+        placeOfOrigin: 'Transport do Nowego Yorku',
     },
     computed: {
         copartCharges: function () {
@@ -33,19 +33,27 @@ const app = new Vue({
         },
         engineSmallPoland: function () {
             return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 800) * this.currencyRate +
-                this.smallEngineTax + this.customTaxPoland + 1500 + 2000);
+                this.customTaxPoland + this.smallEngineTax + this.customTaxPoland + 1500 + 2000);
         },
         engineBigPoland: function () {
             return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 800) * this.currencyRate +
-                this.bigEngineTax + this.customTaxPoland + 1500 + 2000);
+                this.customTaxPoland + this.bigEngineTax + this.customTaxPoland + 1500 + 2000);
         },
         engineSmallGermany: function () {
             return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 700) * this.currencyRate +
-                this.smallEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
+                this.customTaxGermany + this.smallEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
         },
         engineBigGermany: function () {
             return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 700) * this.currencyRate +
-                this.bigEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
+                this.customTaxGermany + this.bigEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
         }
     }
-})
+});
+
+$(function() {
+    $.getJSON('https://api.fixer.io/latest?symbols=USD', function(data) {
+      var usdRate = data.rates.USD.toString();
+      var commaFormatted = usdRate.replace('.', ',')
+      document.getElementById('rate_usd').innerHTML = commaFormatted;
+    });
+  });
