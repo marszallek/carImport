@@ -1,21 +1,7 @@
-
 /*Stylowanie kalkulatora*/
-#container {
-    background-color: white;
-}
-
-#instruction{
-    font-size: 14px;
-    background-color: aqua;
+.thinLine{
+    border: 1px solid #d0c9c975;
     border-radius: 20px;
-    width: 300px;
-}
-
-td,
-th {
-    border-style: solid;
-    border-color: white;
-    border-width: 1px 0px 1px 0px;
 }
 
 .home{
@@ -23,17 +9,65 @@ th {
     border-radius: 20px;
     padding: 5px;
 }
+
 .dolar2 {
     background-color: #c6d3f7;
     box-shadow: 0px 5px 10px black;
     border-radius: 30px;
     font-size: 14px;
     letter-spacing: 1px;
-    width: 350px
 }   
 
-.mark {
-    background-color: blue;
+table{
+    min-width: 260px;
+}
+
+.blueShadow {
+    border-radius: 20px;
+    box-shadow: inset 0px 20px 22px -13px #b4e6f5;
+    letter-spacing: 0.15vw;
+}
+
+.moreSpace{
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: 10px -5px 20px 10px #ffffff;
+}
+
+.polandWhite{
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: inset 0px 0px 20px 5px #f7f3f3;
+}
+
+.polandRed {
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: inset 0px 0px 15px 5px #f70000;
+}
+
+.germanyBlack{
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: inset 0px 0px 20px 5px black;
+}
+
+.germanyRed{
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: inset 0px 0px 20px 5px #f70000;
+}
+
+.germanyYellow{
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: inset 5px -5px 20px 5px #ffc107;
 }
 
 input,
@@ -109,4 +143,16 @@ a,
 a:hover {
     text-decoration: none;
     color: white;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 50px;
+}
+
+#capricorn{
+    text-align: center;
 }

@@ -53,25 +53,30 @@
     <!-- End Of Navigation-->
     <!--Column with Four rows-->
     <div class="container mt-2 mx-auto">
-      <div class="row ">
+      <div class="row thinLine">
         <div class="col">
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
-            <input type="number" v-model="currencyRate" min="2" max="5" step="0.1">Kurs Dolara
+            <span class="mr-3 my-auto">Aktualny Kurs Dolara</span>
+            <select id="loopRate" type="number" v-model="currencyRate" abbr title="Cena za którą został wylicytowany samochód">
+              <option id="rate"></option>
+            </select>
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
-            <input type="number" v-model="price" min="500" step="100" abbr title="Cena za którą został wylicytowany samochód">Cena
-            Licytacji $
+            <span class="mr-3 my-auto">Cena Licytacji $</span>
+            <select id="loopPrice" type="number" v-model="price" abbr title="Cena za którą został wylicytowany samochód">
+            </select>
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
-            <input type="number" v-model="marketPrice" min="10000" step="1000" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu np. z Otomoto.
-          Pomniejszona o max. 60% przez rzeczoznawce. Ta kwota jest niezbędna do obliczenia akcyzy.
-          Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">Wartość
-            Rynkowa w PLN
+            <span class="mr-3">Wartość Rynkowa w PLN</span>
+            <select id="loopMarketPrice" type="number" v-model="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu np. z Otomoto.
+            Ta kwota jest niezbędna do obliczenia akcyzy.
+            Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
+            </select>
           </div>
           <div class="row w-75 rounded mx-auto">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <label class="input-group-text bg-warning" for="dropdown">W którym stanie jest licytacja ?</label>
+                <label class="input-group-text bg-info text-white" for="dropdown">W którym stanie jest licytacja ?</label>
               </div>
               <select class="custom-select" id="dropdown" v-model="placeOfOrigin">
                 <option value="800">AL - Alabama</option>
@@ -129,116 +134,123 @@
           </div>
         </div>
       </div>
-        <!--End of column with Four rows-->
-        <!--row for two column-->
-        <div class="row text-center">
-          <!--First column-->
-          <div class="col">
-            <table class="dolar2 p-0 mx-auto my-3">
-              <tr>
-                <th class="text-danger border-0" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
-              </tr>
-              <tr>
-                <td colspan="3">Przez Gdynie <br /> PLN</td>
-              </tr>
-              <tr>
-                <td colspan="2">Silnik < 2000 ccm<sup>3</sup><br /> PLN</td>
-                <td>{{ engineSmallPoland }}</td>
-              </tr>
-              <tr>
-                <td colspan="2">Silnik > 2000 ccm<sup>3</sup><br /> PLN</td>
-                <td>{{ engineBigPoland }}</td>
-              </tr>
-              <tr>
-                <td colspan="3">Przez Bremerhaven <br /> PLN</td>
-              </tr>
-              <tr>
-                <td colspan="2">Silnik < 2000 ccm<sup>3</sup><br /> PLN</td>
-                <td>{{ engineSmallGermany }}</td>
-              </tr>
-              <tr>
-                <td colspan="2" class="border-0">Silnik > 2000 ccm<sup>3</sup><br /> PLN</td>
-                <td class="border-0">{{ engineBigGermany }}</td>
-              </tr>
-            </table>
-          </div>
+      <!--End of column with Four rows-->
 
-          <!--Second column-->
-          <div class="col">
-            <table class="dolar2 p-0 mx-auto my-3">
-              <tr>
-                <th colspan="2" style="border: 0px;">Koszty <br /> Szczegółowe</th>
-              </tr>
-              <tr>
-                <td>Prowizja Copart/Iaai <br />USD</td>
-                <td> {{ copartCharges }} </td>
-              </tr>
-              <tr>
-                <td>{{ priceToNewYork }}</td>
-                <td>USD</td>
-              </tr>
-              <tr>
-                <td>Gdynia <br /> 800 USD</td>
-                <td>Bremerhaven <br /> 700 USD</td>
-              </tr>
-              <tr>
-                <td>Transport z Bremerhaven do Polski</td>
-                <td>1200 PLN</td>
-              </tr>
-              <tr>
-                <td>Cło 10% <br /> Polska PLN</td>
-                <td>{{ customTaxPoland }}</td>
-              </tr>
-              <tr>
-                <td>Cło 10% <br /> Niemcy PLN</td>
-                <td>{{ customTaxGermany }}</td>
-              </tr>
-              <tr>
-                <td>Vat Polska <br /> 23% PLN</td>
-                <td>{{ vatTaxPoland }}</td>
-              </tr>
-              <tr>
-                <td>Akcyza 3.1% PLN</td>
-                <td rowspan="1">{{ smallEngineTax }}</td>
-              </tr>
-              <tr>
-                <td>Akcyza 18.6% PLN</td>
-                <td rowspan="1">{{ bigEngineTax }}</td>
-              </tr>
-              <tr>
-                <td>Vat Niemcy <br /> 19% PLN</td>
-                <td>{{ vatTaxGermany }}</td>
-              </tr>
-              <tr>
-                <td>Agencja Celna <br /> PL</td>
-                <td>1500 PLN</td>
-              </tr>
-              <tr>
-                <td class="border-0">Agencja Celna <br /> DE</td>
-                <td class="border-0">2500 PLN</td>
-              </tr>
-            </table>
-          </div>
-
-          <!--Third Column-->
-      
+      <!--row for two column-->
+      <div class="row text-center thinLine my-2">
+        <!--First column-->
+        <div class="col blueShadow">
+          <table class="row blueShadow w-75 justify-content-center mx-auto my-3">
+            <tr>
+              <th class="font-weight-normal" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
+            </tr>
+            <tr>
+              <td class="polandWhite" colspan="3">Przez Gdynie [PLN]</td>
+            </tr>
+            <tr>
+              <td class="polandRed" colspan="2">Silnik < 2000 ccm<sup>3</sup><br /></td>
+              <td class="polandRed">{{ engineSmallPoland }}</td>
+            </tr>
+            <tr>
+              <td class="polandRed" colspan="2">Silnik > 2000 ccm<sup>3</sup><br /></td>
+              <td class="polandRed">{{ engineBigPoland }}</td>
+            </tr>
+            <tr>
+              <td colspan="3"><br /></td>
+            </tr>
+          </table>
+          <table class="row blueShadow w-75 justify-content-center mx-auto my-3">
+            <tr>
+              <th class="font-weight-normal p-2" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
+            </tr>
+            <tr>
+              <td class="germanyBlack" colspan="3">Przez Bremerhaven [PLN]</td>
+            </tr>
+            <tr>
+              <td class="germanyRed" colspan="2">Silnik < 2000 ccm<sup>3</sup></td>
+              <td class="germanyRed">{{ engineSmallGermany }}</td>
+            </tr>
+            <tr>
+              <td class="germanyYellow" colspan="2">Silnik > 2000 ccm<sup>3</sup></td>
+              <td class="germanyYellow">{{ engineBigGermany }}</td>
+            </tr>
+            <tr>
+              <td colspan="3"><br /></td>
+            </tr>
+          </table>
         </div>
-      
-      <!--End Of Row With Three Columns-->
 
-
-      <div class="row mx-auto">
-        <h5><address> marszallek@vp.pl <br />
-            +48 660 771 501 </address>
-          <p>Daniel Marszałek</p>
-        </h5>
+        <!--Second column-->
+        <div class="col">
+          <table class="dolar2 mx-auto my-3">
+            <tr>
+              <th class="text-danger font-weight-bold moreSpace" colspan="2">Koszty Szczegółowe</th>
+            </tr>
+            <tr>
+              <td class="moreSpace">Prowizja Copart/Iaai</td>
+              <td class="moreSpace"> {{ copartCharges }} [USD]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Transport Do NY</td>
+              <td class="moreSpace">{{ priceToNewYork }} [USD]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Kontener do Gdyni</td>
+              <td class="moreSpace">800 [USD]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Kontener do Bremerhaven</td>
+              <td class="moreSpace">700 [USD]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Transport z Bremerhaven do Polski</td>
+              <td class="moreSpace">1200 [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Cło 10% Polska</td>
+              <td class="moreSpace">{{ customTaxPoland }} [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Cło 10% Niemcy</td>
+              <td class="moreSpace">{{ customTaxGermany }} [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Vat Polska 23%</td>
+              <td class="moreSpace">{{ vatTaxPoland }} [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Vat Niemcy 19% </td>
+              <td class="moreSpace">{{ vatTaxGermany }} [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Akcyza 3.1%</td>
+              <td class="moreSpace">{{ smallEngineTax }} [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Akcyza 18.6% </td>
+              <td class="moreSpace">{{ bigEngineTax }} [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Agencja Celna PL</td>
+              <td class="moreSpace">1500 [PLN]</td>
+            </tr>
+            <tr>
+              <td class="moreSpace">Agencja Celna DE</td>
+              <td class="moreSpace">2500 [PLN]</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--End Of Row With Two Columns-->
+      <div class="row footer justify-content-center">
+        <p class="mt-4">Daniel Marszałek &copy;</p>
       </div>
       <!--end of div Footer-->
     </div>
     <!--End Of The Container-->
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <!--End Of App-->
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
