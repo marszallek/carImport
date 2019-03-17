@@ -1,4 +1,4 @@
-function payLowTax() {
+/*function payLowTax() {
 	var score = document.getElementById("score").value;
 	var rate = document.getElementById("rate").value;
 	document.getElementById("tax").textContent = Math.round(score * 0.031 / rate);
@@ -24,7 +24,7 @@ function newyork() {
 function calculate() {
 	var price = document.getElementById("auction").value;
 	var fee = price * 0.1;
-	document.getElementById("profit").textContent = fee;
+	document.getElementById("profit").textContent = Math.round(fee);
 	var york = document.getElementById("york").textContent;
 	document.getElementById("clop").textContent = Math.round((+york + 800 + +price + +fee) * 0.1);
 	document.getElementById("clon").textContent = Math.round((+york + 700 + +price + +fee) * 0.1);
@@ -41,3 +41,4 @@ function calculate() {
 	document.getElementById("suma").textContent = Math.round(suma);
 	document.getElementById("sumb").textContent = Math.round(sumb);
 };
+*/

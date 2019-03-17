@@ -13,7 +13,9 @@
 
 td,
 th {
-    border: 1px solid white;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0px 1px 0px;
 }
 
 .home{
