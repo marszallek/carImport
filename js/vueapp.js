@@ -80,7 +80,7 @@ for (let i = 10000; i <= 500000; i = i+= 2000){
 
 // set endpoint and your access key
 endpoint = 'live'
-access_key = '618b84c46bd93d0253e2fa295a8ef4a';
+access_key = '618b84c46bd93d0253e2fa295a8ef4a4';
 // get the most recent exchange rates via the "live" endpoint:
 $.ajax({
     url: 'http://apilayer.net/api/' + endpoint + '?access_key=' + access_key,   
