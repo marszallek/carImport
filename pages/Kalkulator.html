@@ -57,7 +57,7 @@
         <div class="col">
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3 my-auto">Aktualny Kurs Dolara</span>
-            <select id="loopRate" type="number" v-model="currencyRate" abbr title="Cena za którą został wylicytowany samochód">
+            <select id="loopRate" type="number" v-model="currencyRate">
               <option id="rate"></option>
             </select>
           </div>
@@ -68,9 +68,9 @@
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3">Wartość Rynkowa w PLN</span>
-            <select id="loopMarketPrice" type="number" v-model="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu np. z Otomoto.
-            Ta kwota jest niezbędna do obliczenia akcyzy.
-            Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
+            <select id="loopMarketPrice" type="number" v-model="marketPrice" 
+            abbr title="Kwota tutaj podana to wartosc rynkowa samochodu np. z Otomoto. 
+            Ta kwota jest niezbędna do obliczenia akcyzy. Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
             </select>
           </div>
           <div class="row w-75 rounded mx-auto">
@@ -139,40 +139,40 @@
       <!--row for two column-->
       <div class="row text-center thinLine my-2">
         <!--First column-->
-        <div class="col blueShadow greyBackground">
-          <table class="row blueShadow w-75 justify-content-center mx-auto my-3">
+        <div class="col blackShadow font-weight-bold my-auto bg-light">
+          <table class="row blackShadow w-75 justify-content-center mx-auto my-3">
             <tr>
-              <th class="font-weight-normal text-danger polandWhite" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
+              <th class="font-weight-normal text-danger font-weight-bold " colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
             </tr>
             <tr>
-              <td class="polandWhite" colspan="3">Przez Gdynie [PLN]</td>
+              <td colspan="3">Przez Gdynie [PLN]</td>
             </tr>
             <tr>
-              <td class="polandRed" colspan="2">Silnik < 2000 ccm<sup>3</sup><br /></td>
-              <td class="polandRed">{{ engineSmallPoland }}</td>
+              <td class="score" colspan="2">Silnik < 2000 ccm<sup>3</sup><br /></td>
+              <td class="score">{{ engineSmallPoland }}</td>
             </tr>
             <tr>
-              <td class="polandRed" colspan="2">Silnik > 2000 ccm<sup>3</sup><br /></td>
-              <td class="polandRed">{{ engineBigPoland }}</td>
+              <td class="score" colspan="2">Silnik > 2000 ccm<sup>3</sup><br /></td>
+              <td class="score">{{ engineBigPoland }}</td>
             </tr>
             <tr>
               <td colspan="3"><br /></td>
             </tr>
           </table>
-          <table class="row blueShadow w-75 justify-content-center mx-auto my-3">
+          <table class="row blackShadow w-75 justify-content-center mx-auto my-3">
             <tr>
-              <th class="font-weight-normal p-2 text-danger" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
+              <th class="font-weight-normal p-2 text-danger font-weight-bold" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
             </tr>
             <tr>
-              <td class="germanyBlack" colspan="3">Przez Bremerhaven [PLN]</td>
+              <td colspan="3">Przez Bremerhaven [PLN]</td>
             </tr>
             <tr>
-              <td class="germanyRed" colspan="2">Silnik < 2000 ccm<sup>3</sup></td>
-              <td class="germanyRed">{{ engineSmallGermany }}</td>
+              <td class="score" colspan="2">Silnik < 2000 ccm<sup>3</sup></td>
+              <td class="score">{{ engineSmallGermany }}</td>
             </tr>
             <tr>
-              <td class="germanyYellow" colspan="2">Silnik > 2000 ccm<sup>3</sup></td>
-              <td class="germanyYellow">{{ engineBigGermany }}</td>
+              <td class="score" colspan="2">Silnik > 2000 ccm<sup>3</sup></td>
+              <td class="score">{{ engineBigGermany }}</td>
             </tr>
             <tr>
               <td colspan="3"><br /></td>

@@ -22,56 +22,25 @@ table{
     min-width: 260px;
 }
 
-.greyBackground{
-    background-color: #848b8c17;
-}
-
-.blueShadow {
+.blackShadow {
     border-radius: 20px;
-    box-shadow: inset 0px 20px 22px -13px #b4e6f5;
+    box-shadow: inset 0px 0px 2px 2px black;
     letter-spacing: 0.15vw;
 }
 
-.moreSpace{
+.moreSpace {
     padding: 10px;
-    border-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     letter-spacing: 0.1vw;
-    box-shadow: 10px -5px 20px 10px #ffffff;
+    box-shadow: 0px 2px 0px 0px #e8e2e2;
 }
 
-.polandWhite{
+.score {
     padding: 10px;
     border-radius: 30px;
     letter-spacing: 0.1vw;
-    box-shadow: inset 0px 0px 20px 5px #f7f3f3;
-}
-
-.polandRed {
-    padding: 10px;
-    border-radius: 30px;
-    letter-spacing: 0.1vw;
-    box-shadow: inset 0px 0px 30px -5px #f70000;
-}
-
-.germanyBlack{
-    padding: 10px;
-    border-radius: 30px;
-    letter-spacing: 0.1vw;
-    box-shadow: inset 0px 0px 30px -5px black;
-}
-
-.germanyRed{
-    padding: 10px;
-    border-radius: 30px;
-    letter-spacing: 0.1vw;
-    box-shadow: inset 0px 0px 30px -5px #f70000;
-}
-
-.germanyYellow{
-    padding: 10px;
-    border-radius: 30px;
-    letter-spacing: 0.1vw;
-    box-shadow: inset 5px -5px 30px -5px #ffc107;
+    box-shadow: inset 0px 0px 15px -5px #2a2940;
 }
 
 .header {
