@@ -1,53 +1,46 @@
 
-/*Stylowanie kalkulatora*/
-#container {
-    background-color: white;
-}
-
-#instruction{
-    font-size: 14px;
-    background-color: aqua;
-    border-radius: 20px;
-    width: 300px;
-}
-
-td,
-th {
-    border: 1px solid white;
-}
-
 .home{
     box-shadow: inset white 0px 0px 10px -5px;
     border-radius: 20px;
     padding: 5px;
 }
+
+.thinLine{
+    border: 1px solid #d0c9c975;
+    border-radius: 20px;
+}
+ 
 .dolar2 {
     background-color: #c6d3f7;
     box-shadow: 0px 5px 10px black;
     border-radius: 30px;
     font-size: 14px;
     letter-spacing: 1px;
-    width: 350px
 }   
 
-.mark {
-    background-color: blue;
+table{
+    min-width: 260px;
 }
 
-input,
-select {
-    width: 100px;
-    margin-right: 10px;
-    border-radius: 10px;
-    text-align: center;
+.blackShadow {
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 2px 2px black;
+    letter-spacing: 0.15vw;
 }
 
+.moreSpace {
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    letter-spacing: 0.1vw;
+    box-shadow: 0px 2px 0px 0px #e8e2e2;
+}
 
-/*Styling of main */
-
-body {
-    background-color: white;
-    font-family: Geneva, Tahoma, sans-serif;
+.score {
+    padding: 10px;
+    border-radius: 30px;
+    letter-spacing: 0.1vw;
+    box-shadow: inset 0px 0px 15px -5px #2a2940;
 }
 
 .header {
@@ -68,7 +61,7 @@ body {
     letter-spacing: 0.7vw;
     text-align: center;
 }
-.active{
+.present{
     margin: 10px 20px 10px 20px;
     background-color: rgb(180, 50, 50);
     border-radius: 20px;
@@ -87,10 +80,6 @@ body {
     border-radius: 0px 0px 20px 20px;
 }
 
-#close:hover {
-    cursor: pointer;
-}
-
 .menu {
     width: 16vw;
     min-width: 110px;
@@ -107,4 +96,16 @@ a,
 a:hover {
     text-decoration: none;
     color: white;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 50px;
+}
+
+#capricorn{
+    text-align: center;
 }
