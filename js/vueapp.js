@@ -60,7 +60,7 @@ for (let i = 2; i <= 5.01; i += 0.1){
     option.value = i;
     option.innerHTML = Math.round(i * 10) / 10;
     rateInLoop.options.add(option);
-};
+}
 
 for (let i = 1000; i <= 100000; i = i+= 100){
     const priceInLoop = document.getElementById('loopPrice');  
@@ -68,7 +68,7 @@ for (let i = 1000; i <= 100000; i = i+= 100){
     option.value = i;
     option.innerHTML = i;
     priceInLoop.options.add(option);
-};
+}
 
 for (let i = 10000; i <= 500000; i = i+= 2000){
     const marketPriceInLoop = document.getElementById('loopMarketPrice'); 
@@ -76,7 +76,7 @@ for (let i = 10000; i <= 500000; i = i+= 2000){
     option.value = i;
     option.innerHTML = i;
     marketPriceInLoop.options.add(option);
-};
+}
 
 // set endpoint and your access key
 endpoint = 'live'
@@ -88,4 +88,4 @@ $.ajax({
     success: function(json) {
         document.getElementById('rate').innerHTML = Math.round(json.quotes.USDPLN * 1000) / 1000;
     }
-});
+})
