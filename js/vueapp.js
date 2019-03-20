@@ -17,38 +17,38 @@ const app = new Vue({
             return Math.round(this.marketPrice * 0.6 * 0.186)
         },
         priceToNewYork() {
-            if(this.placeOfOrigin == 'NOT'){
+            if(this.placeOfOrigin == 0){
                 alert('Zwariowałeś??? Transport z Alaski do Nowego Yorku? :):) Ja się tego nie podejmę!!!')
-            }else if(this.placeOfOrigin == 'NO'){
+            }else if(this.placeOfOrigin == 1){
                 alert('Na Hawaje to sobie można pojechać a nie samochody przywozić')
             }else return this.placeOfOrigin;
         },
         customTaxPoland: function () {
-            return Math.round((+this.price + 800) * this.currencyRate * 0.1)
+            return Math.round((this.price + 800) * this.currencyRate * 0.1)
         },
         customTaxGermany: function () {
-            return Math.round((+this.price + 700) * this.currencyRate * 0.1)
+            return Math.round((this.price + 700) * this.currencyRate * 0.1)
         },
         vatTaxPoland: function () {
-            return Math.round((+this.price + this.customTaxPoland) * 0.23 * this.currencyRate)
+            return Math.round((this.price + this.customTaxPoland) * 0.23 * this.currencyRate)
         },
         vatTaxGermany: function () {
-            return Math.round((+this.price + this.customTaxGermany) * 0.19 * this.currencyRate)
+            return Math.round((this.price + this.customTaxGermany) * 0.19 * this.currencyRate)
         },
         engineSmallPoland: function () {
-            return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 800) * this.currencyRate +
+            return Math.round((this.price + this.copartCharges + this.priceToNewYork + 800) * this.currencyRate +
                 this.customTaxPoland + this.smallEngineTax + this.customTaxPoland + 1500 + 2000);
         },
         engineBigPoland: function () {
-            return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 800) * this.currencyRate +
+            return Math.round((this.price + this.copartCharges + this.priceToNewYork + 800) * this.currencyRate +
                 this.customTaxPoland + this.bigEngineTax + this.customTaxPoland + 1500 + 2000);
         },
         engineSmallGermany: function () {
-            return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 700) * this.currencyRate +
+            return Math.round((this.price + this.copartCharges + this.priceToNewYork + 700) * this.currencyRate +
                 this.customTaxGermany + this.smallEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
         },
         engineBigGermany: function () {
-            return Math.round((+this.price + this.copartCharges + +this.priceToNewYork + 700) * this.currencyRate +
+            return Math.round((this.price + this.copartCharges + this.priceToNewYork + 700) * this.currencyRate +
                 this.customTaxGermany + this.bigEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
         }
     }
