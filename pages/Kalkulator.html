@@ -48,18 +48,18 @@
         <div class="col"><!--Column With Four Rows-->
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3 my-auto">Aktualny Kurs Dolara</span>
-            <select id="loopRate" type="number" v-model="currencyRate">
+            <select id="loopRate" type="number" v-model.number="currencyRate">
               <option id="rate"></option>
             </select>
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3 my-auto">Cena Licytacji $</span>
-            <select id="loopPrice" type="number" v-model="price" abbr title="Cena za którą został wylicytowany samochód">
+            <select id="loopPrice" type="number" v-model.number="price" abbr title="Cena za którą został wylicytowany samochód">
             </select>
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3">Wartość Rynkowa w PLN</span>
-            <select id="loopMarketPrice" type="number" v-model="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu
+            <select id="loopMarketPrice" type="number" v-model.number="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu
             np. z Otomoto. Ta kwota jest niezbędna do obliczenia akcyzy. Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
             </select>
           </div>
@@ -68,9 +68,9 @@
               <div class="input-group-prepend">
                 <label class="input-group-text bg-info text-white" for="dropdown">W którym stanie jest licytacja ?</label>
               </div>
-              <select class="custom-select" id="dropdown" v-model="placeOfOrigin">
+              <select class="custom-select" id="dropdown" v-model.number="placeOfOrigin">
                 <option value="800">AL - Alabama</option>
-                <option value="NOT">AK - Alaska</option>
+                <option value="0">AK - Alaska</option>
                 <option value="1200">AZ - Arizona</option>
                 <option value="900">AR - Arkansas</option>
                 <option value="1200">CA - Caifornia</option>
@@ -79,7 +79,7 @@
                 <option value="600">DE - Delaware</option>
                 <option value="800">FL - Florida</option>
                 <option value="800">GA - Georgia</option>
-                <option value="NO">HI - Hawaii</option>
+                <option value="1">HI - Hawaii</option>
                 <option value="1500">ID - Idaho</option>
                 <option value="800">IL - Illinois</option>
                 <option value="800">IN - Indiana</option>
