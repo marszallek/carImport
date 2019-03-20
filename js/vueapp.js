@@ -17,9 +17,9 @@ const app = new Vue({
             return Math.round(this.marketPrice * 0.6 * 0.186)
         },
         priceToNewYork() {
-            if(this.placeOfOrigin == 0){
+            if(this.placeOfOrigin === 0){
                 alert('Zwariowałeś??? Transport z Alaski do Nowego Yorku? :):) Ja się tego nie podejmę!!!')
-            }else if(this.placeOfOrigin == 1){
+            }else if(this.placeOfOrigin === 1){
                 alert('Na Hawaje to sobie można pojechać a nie samochody przywozić')
             }else return this.placeOfOrigin;
         },
