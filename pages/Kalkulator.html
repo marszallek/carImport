@@ -6,35 +6,27 @@
   <meta name="description" content="Jak sprowadzić samochód z USA. Koszty sprowadzenia samochodu z USA.">
   <meta name="keywords" content="samochody, usa, stany zjednoczone, import, copart, sprowadzenie, oplaty sprowadzenia samochody z usa,">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--ładnie rozkłada stronę w zależności od rozdzielczości i ekranu-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
   <meta name="robots" content="nofollow">
-  <!--sprawie ze strona jest zapamietywana przez wyszukiwarke-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <!--sprawia ze jest wyswietlana w najnowszej wersji IE oraz najnowszej wersji wtyczki Chrome-->
   <meta http-equiv="pragma" content="no-cache">
-  <!--zapobiega zapisywaniu strony na dysku-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="../css/calcStyles.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer="defer"></script>
   <script src="../js/vueapp.js" defer="defer"></script>
-  <!--<script src="../js/add-content.js" defer="defer"></script>-->
   <title>Import Samochodu z USA</title>
 </head>
 
 <body>
-  <div id="app">
-    <div class="container p-0">
+  <div id="app"><!--VueApp-->
+    <div class="container p-0"><!--Navigation-->
       <div class=" row, header">
         <div class="col, text-white text-right">
-          <h2>Import samochodu z USA</h1>
+          <h2>Import samochodu z USA</h2>
         </div>
         <div class="col text-white text-center my-5">
           <a class="home" href="../index.html">Strona Główna</a>
         </div>
-        <!--Logo-->
       </div>
-      <!--header-->
       <div class="row, navbar">
         <div class="col navbuttons"><a href="Projekty.html">
             Projekty</a>
@@ -49,12 +41,11 @@
             Kontakt</a>
         </div>
       </div>
-    </div>
-    <!-- End Of Navigation-->
-    <!--Column with Four rows-->
-    <div class="container mt-2 mx-auto">
+    </div><!--End Of Container's Navigation-->
+
+    <div class="container mt-2 mx-auto"><!--Content-->
       <div class="row thinLine">
-        <div class="col">
+        <div class="col"><!--Column With Four Rows-->
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3 my-auto">Aktualny Kurs Dolara</span>
             <select id="loopRate" type="number" v-model="currencyRate">
@@ -68,9 +59,8 @@
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3">Wartość Rynkowa w PLN</span>
-            <select id="loopMarketPrice" type="number" v-model="marketPrice" 
-            abbr title="Kwota tutaj podana to wartosc rynkowa samochodu np. z Otomoto. 
-            Ta kwota jest niezbędna do obliczenia akcyzy. Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
+            <select id="loopMarketPrice" type="number" v-model="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu
+            np. z Otomoto. Ta kwota jest niezbędna do obliczenia akcyzy. Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
             </select>
           </div>
           <div class="row w-75 rounded mx-auto">
@@ -132,17 +122,15 @@
               </select>
             </div>
           </div>
-        </div>
+        </div><!--End Of Column With Four Rows-->
       </div>
-      <!--End of column with Four rows-->
 
-      <!--row for two column-->
-      <div class="row text-center thinLine my-2">
-        <!--First column-->
-        <div class="col blackShadow font-weight-bold my-auto bg-light">
+      <div class="row text-center thinLine my-2"><!--Row For Two Columns-->
+        <div class="col blackShadow font-weight-bold my-auto bg-light"><!--First Column-->
           <table class="row blackShadow w-75 justify-content-center mx-auto my-3">
             <tr>
-              <th class="font-weight-normal text-danger font-weight-bold " colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
+              <th class="font-weight-normal text-danger font-weight-bold " colspan="3">CENA SAMOCHODU PO OPŁATACH W
+                POLSCE</th>
             </tr>
             <tr>
               <td colspan="3">Przez Gdynie [PLN]</td>
@@ -161,7 +149,8 @@
           </table>
           <table class="row blackShadow w-75 justify-content-center mx-auto my-3">
             <tr>
-              <th class="font-weight-normal p-2 text-danger font-weight-bold" colspan="3">CENA SAMOCHODU PO OPŁATACH W POLSCE</th>
+              <th class="font-weight-normal p-2 text-danger font-weight-bold" colspan="3">CENA SAMOCHODU PO OPŁATACH W
+                POLSCE</th>
             </tr>
             <tr>
               <td colspan="3">Przez Bremerhaven [PLN]</td>
@@ -179,9 +168,7 @@
             </tr>
           </table>
         </div>
-
-        <!--Second column-->
-        <div class="col">
+        <div class="col"><!--Second Column-->
           <table class="dolar2 mx-auto my-3">
             <tr>
               <th class="text-danger font-weight-bold moreSpace" colspan="2">Koszty Szczegółowe</th>
@@ -240,16 +227,14 @@
             </tr>
           </table>
         </div>
-      </div>
-      <!--End Of Row With Two Columns-->
-      <div class="row footer justify-content-center">
-        <p class="mt-4">Daniel Marszałek &copy;</p>
-      </div>
-      <!--end of div Footer-->
-    </div>
-    <!--End Of The Container-->
-  </div>
-  <!--End Of App-->
+      </div><!--End Of Row With Two Columns-->
+
+      <div class="row footer justify-content-center"><!--Footer-->
+        <p class="mt-3">Daniel Marszałek &copy;</p>
+      </div><!--End Of Footer-->
+
+    </div><!--End Of Content-->
+  </div><!--End Of VueApp-->
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

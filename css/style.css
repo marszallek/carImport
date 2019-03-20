@@ -45,18 +45,6 @@
   border-radius: 0px 0px 20px 20px;
 }
 
-.menu {
-  width: 16vw;
-  min-width: 110px;
-  max-width: 230px;
-  border-bottom: 1px solid white;
-  border-radius: 0.5vw;
-  letter-spacing: 0.7vw;
-  text-align: center;
-  line-height: 25px;
-  box-shadow: 0px 0px 13px 2px white
-}
-
 .home{
   box-shadow: inset white 0px 0px 10px -5px;
   border-radius: 20px;
@@ -94,8 +82,4 @@ a:hover {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 50px;
-}
-
-#capricorn{
-  text-align: center;
 }
