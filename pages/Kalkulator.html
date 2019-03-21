@@ -69,56 +69,7 @@
                 <label class="input-group-text bg-info text-white" for="dropdown">W którym stanie jest licytacja ?</label>
               </div>
               <select class="custom-select" id="dropdown" v-model.number="placeOfOrigin">
-                <option value="800">AL - Alabama</option>
-                <option value="0">AK - Alaska</option>
-                <option value="1200">AZ - Arizona</option>
-                <option value="900">AR - Arkansas</option>
-                <option value="1200">CA - Caifornia</option>
-                <option value="1000">CO - Colorado</option>
-                <option value="800">CT - Connecticut</option>
-                <option value="600">DE - Delaware</option>
-                <option value="800">FL - Florida</option>
-                <option value="800">GA - Georgia</option>
-                <option value="1">HI - Hawaii</option>
-                <option value="1500">ID - Idaho</option>
-                <option value="800">IL - Illinois</option>
-                <option value="800">IN - Indiana</option>
-                <option value="900">IA - Iowa</option>
-                <option value="900">KS - Kansas</option>
-                <option value="800">KY - Kentucky</option>
-                <option value="900">LA - Louisiana</option>
-                <option value="800">ME - Maine</option>
-                <option value="600">MD - Meryland</option>
-                <option value="800">MA - Massachusetts</option>
-                <option value="800">MI - Michigan</option>
-                <option value="1000">MN - Minesota</option>
-                <option value="800">MS - Mississippi</option>
-                <option value="900">MO - Missouri</option>
-                <option value="1500">MT - Montana</option>
-                <option value="1000">NE - Nebraska</option>
-                <option value="1200">NV - Nevada</option>
-                <option value="800">NH - New Hampshire</option>
-                <option value="600">NJ - New Jersey</option>
-                <option value="1000">NM - New Mexico</option>
-                <option value="600">NY - New York</option>
-                <option value="600">NC - North Carolina</option>
-                <option value="1000">ND - North Dakota</option>
-                <option value="600">OH - Ohio</option>
-                <option value="900">OK - Oklahoma</option>
-                <option value="1500">OR - Oregon</option>
-                <option value="600">PA - Pennsylvania</option>
-                <option value="800">RI - Rhode Island</option>
-                <option value="600">SC - South California</option>
-                <option value="1000">SD - South Dakota</option>
-                <option value="800">TN - Tennessee</option>
-                <option value="900">TX - Texas</option>
-                <option value="1200">UT - Utah</option>
-                <option value="800">VT - Vermont</option>
-                <option value="600">VA - Virginia</option>
-                <option value="1500">WA - Washington</option>
-                <option value="600">WV - West Virginia</option>
-                <option value="900">WI - Wisconsin</option>
-                <option value="1000">WY - Wyoming</option>
+                <option v-for="state in states" v-bind:value="state.value">{{ state.label }}</option>
               </select>
             </div>
           </div>
