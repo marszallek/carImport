@@ -3,7 +3,7 @@ const app = new Vue({
     data: {
         currencyRate: 3.8,
         price: 1000,
-        marketPrice: 20000,
+        marketPrice: 10000,
         placeOfOrigin: 1,
     },
     computed: {
