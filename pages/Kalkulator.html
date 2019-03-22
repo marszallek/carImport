@@ -69,7 +69,56 @@
                 <label class="input-group-text bg-info text-white" for="dropdown">W którym stanie jest licytacja ?</label>
               </div>
               <select class="custom-select" id="dropdown" v-model.number="placeOfOrigin">
-                <option v-for="state in states" v-bind:value="state.value">{{ state.label }}</option>
+                <option value="1">AL - Alabama</option>
+                <option value="49">AK - Alaska</option>
+                <option value="16">AZ - Arizona</option>
+                <option value="20">AR - Arkansas</option>
+                <option value="17">CA - Caifornia</option>
+                <option value="28">CO - Colorado</option>
+                <option value="2">CT - Connecticut</option>
+                <option value="36">DE - Delaware</option>
+                <option value="3">FL - Florida</option>
+                <option value="4">GA - Georgia</option>
+                <option value="50">HI - Hawaii</option>
+                <option value="46">ID - Idaho</option>
+                <option value="5">IL - Illinois</option>
+                <option value="6">IN - Indiana</option>
+                <option value="21">IA - Iowa</option>
+                <option value="22">KS - Kansas</option>
+                <option value="7">KY - Kentucky</option>
+                <option value="23">LA - Louisiana</option>
+                <option value="8">ME - Maine</option>
+                <option value="37">MD - Meryland</option>
+                <option value="9">MA - Massachusetts</option>
+                <option value="10">MI - Michigan</option>
+                <option value="29">MN - Minesota</option>
+                <option value="11">MS - Mississippi</option>
+                <option value="24">MO - Missouri</option>
+                <option value="30">MT - Montana</option>
+                <option value="31">NE - Nebraska</option>
+                <option value="18">NV - Nevada</option>
+                <option value="12">NH - New Hampshire</option>
+                <option value="38">NJ - New Jersey</option>
+                <option value="32">NM - New Mexico</option>
+                <option value="39">NY - New York</option>
+                <option value="40">NC - North Carolina</option>
+                <option value="33">ND - North Dakota</option>
+                <option value="41">OH - Ohio</option>
+                <option value="25">OK - Oklahoma</option>
+                <option value="47">OR - Oregon</option>
+                <option value="42">PA - Pennsylvania</option>
+                <option value="13">RI - Rhode Island</option>
+                <option value="43">SC - South California</option>
+                <option value="34">SD - South Dakota</option>
+                <option value="14">TN - Tennessee</option>
+                <option value="26">TX - Texas</option>
+                <option value="19">UT - Utah</option>
+                <option value="15">VT - Vermont</option>
+                <option value="44">VA - Virginia</option>
+                <option value="48">WA - Washington</option>
+                <option value="45">WV - West Virginia</option>
+                <option value="27">WI - Wisconsin</option>
+                <option value="35">WY - Wyoming</option>
               </select>
             </div>
           </div>
@@ -176,12 +225,16 @@
               <td class="moreSpace">Agencja Celna DE</td>
               <td class="moreSpace">2500 [PLN]</td>
             </tr>
+            <tr>
+                <td class="moreSpace">Prowizja</td>
+                <td class="moreSpace">2000 [PLN]</td>
+              </tr>
           </table>
         </div>
       </div><!--End Of Row With Two Columns-->
 
       <div class="row footer justify-content-center"><!--Footer-->
-        <p class="mt-3">Daniel Marszałek &copy;</p>
+        <p class="mt-2">Daniel Marszałek &copy;</p>
       </div><!--End Of Footer-->
 
     </div><!--End Of Content-->
