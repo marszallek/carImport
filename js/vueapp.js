@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        currencyRate: 3.8,
+        currencyRate: 2,
         price: 1000,
         marketPrice: 10000,
         placeOfOrigin: 1,
