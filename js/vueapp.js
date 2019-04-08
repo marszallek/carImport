@@ -3,7 +3,7 @@ const app = new Vue({
     data: {
         currencyRate: 2,
         price: 1000,
-        marketPrice: 10000,
+        marketPrice: 20000,
         placeOfOrigin: 1,
     },
     computed: {
@@ -63,32 +63,31 @@ const app = new Vue({
             return Math.round((this.price + this.copartCharges + this.priceToNewYork + 700) * this.currencyRate +
                 this.customTaxGermany + this.bigEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
         }
+    },
+    methods: {
+        getRate: function (start, stop, step) {
+            let rate =[];
+            for (let i = start; i <= stop; i += step){
+                rate.push(Math.round(i * 100) / 100)
+            }
+            return rate
+        },
+        getPrice: function (start, stop, step) {
+            let price =[];
+            for (let i = start; i <= stop; i += step){
+                price.push(Math.round(i))
+            }
+            return price
+        },
+        getValue: function (start, stop, step) {
+            let value =[];
+            for (let i = start; i <= stop; i += step){
+                value.push(Math.round(i))
+            }
+            return value
+        }
     }
 });
-
-for (let i = 2; i <= 5.01; i += 0.1){
-    const rateInLoop = document.getElementById('loopRate');
-    let option = document.createElement('option');
-    option.value = i;
-    option.innerHTML = Math.round(i * 10) / 10;
-    rateInLoop.options.add(option);
-}
-
-for (let i = 1000; i <= 100000; i = i+= 100){
-    const priceInLoop = document.getElementById('loopPrice');  
-    let option = document.createElement('option');
-    option.value = i;
-    option.innerHTML = i;
-    priceInLoop.options.add(option);
-}
-
-for (let i = 10000; i <= 500000; i = i+= 2000){
-    const marketPriceInLoop = document.getElementById('loopMarketPrice'); 
-    let option = document.createElement('option');
-    option.value = i;
-    option.innerHTML = i;
-    marketPriceInLoop.options.add(option);
-}
 
 /* set endpoint and your access key
 endpoint = 'live'

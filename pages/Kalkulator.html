@@ -48,19 +48,21 @@
         <div class="col"><!--Column With Four Rows-->
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3 my-auto">Aktualny Kurs Dolara</span>
-            <select id="loopRate" type="number" v-model.number="currencyRate">
-              <option id="rate"></option>
+            <select type="number" v-model.number="currencyRate">
+              <option v-for="n in getRate(2, 5, 0.1)" :value="n">{{ n }}</option>
             </select>
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3 my-auto">Cena Licytacji $</span>
-            <select id="loopPrice" type="number" v-model.number="price" abbr title="Cena za którą został wylicytowany samochód">
+            <select type="number" v-model.number="price" abbr title="Cena za którą został wylicytowany samochód">
+              <option v-for="n in getPrice(1000, 100000, 200)" :value="n">{{ n }}</option>
             </select>
           </div>
           <div class="row w-75 mx-auto border border-primary bg-light rounded-pill my-3 py-1 justify-content-center">
             <span class="mr-3">Wartość Rynkowa w PLN</span>
-            <select id="loopMarketPrice" type="number" v-model.number="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu
+            <select type="number" v-model.number="marketPrice" abbr title="Kwota tutaj podana to wartosc rynkowa samochodu
             np. z Otomoto. Ta kwota jest niezbędna do obliczenia akcyzy. Szczególnie przy samochodach o silnikach powyżej 2000 ccm3">
+              <option v-for="n in getValue(20000, 1000000, 5000)" :value="n">{{ n }}</option>
             </select>
           </div>
           <div class="row w-75 rounded mx-auto">
