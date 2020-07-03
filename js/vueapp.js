@@ -3,7 +3,7 @@ const app = new Vue({
     data: {
         currencyRate: 2,
         price: 1000,
-        marketPrice: 20000,
+        marketPrice: 40000,
         placeOfOrigin: 1,
     },
     computed: {
@@ -49,19 +49,19 @@ const app = new Vue({
         },
         engineSmallPoland: function () {
             return Math.round((this.price + this.copartCharges + this.priceToNewYork + 800) * this.currencyRate +
-                this.customTaxPoland + this.smallEngineTax + this.customTaxPoland + 1500 + 2000);
+                this.customTaxPoland + this.smallEngineTax + this.customTaxPoland + 1500 + 4000);
         },
         engineBigPoland: function () {
             return Math.round((this.price + this.copartCharges + this.priceToNewYork + 800) * this.currencyRate +
-                this.customTaxPoland + this.bigEngineTax + this.customTaxPoland + 1500 + 2000);
+                this.customTaxPoland + this.bigEngineTax + this.customTaxPoland + 1500 + 4000);
         },
         engineSmallGermany: function () {
             return Math.round((this.price + this.copartCharges + this.priceToNewYork + 700) * this.currencyRate +
-                this.customTaxGermany + this.smallEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
+                this.customTaxGermany + this.smallEngineTax + this.customTaxPoland + 1200 + 2500 + 4000);
         },
         engineBigGermany: function () {
             return Math.round((this.price + this.copartCharges + this.priceToNewYork + 700) * this.currencyRate +
-                this.customTaxGermany + this.bigEngineTax + this.customTaxPoland + 1200 + 2500 + 2000);
+                this.customTaxGermany + this.bigEngineTax + this.customTaxPoland + 1200 + 2500 + 4000);
         }
     },
     methods: {
